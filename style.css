@@ -1,0 +1,121 @@
+/* styles.css */
+/* Existing Mother Code */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff7e6;
+  color: #333;
+}
+
+header {
+  background-color: #ff9800;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header select {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: #ffe0b2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #e65100;
+}
+
+footer {
+  background-color: #ffcc80;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Latest Additions for Interactive Walkthrough Game */
+#gameArea {
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ff9800;
+  border-radius: 10px;
+  background-color: #fff;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gameArea h3 {
+  text-align: center;
+  color: #e65100;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#taskSteps {
+  list-style: none;
+  padding: 0;
+}
+
+#taskSteps li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffe0b2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none; /* Only the active step will be shown */
+}
+
+#taskSteps li.active {
+  display: list-item;
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #e65100;
+}
+/* Style for task numbers and names */
+ol > li > strong {
+  font-weight: bold;
+  background: linear-gradient(90deg, #FF7F50, #FFD700, #ADFF2F, #00FA9A, #1E90FF, #8A2BE2);
+  -webkit-background-clip: text; /* Enables the gradient on text */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+  font-size: 1.2rem; /* Slightly larger for emphasis */
+  margin-bottom: 10px; /* Space between tasks */
+}
+
+/* Style for instructions under tasks */
+ol > li > ul > li {
+  font-weight: normal; /* Regular weight for instructions */
+  color: #333; /* Dark gray for readability */
+  font-size: 1rem; /* Standard font size */
+  margin-left: 20px; /* Indent to distinguish from the task name */
+}
+
+/* Optional: Add spacing between task name and number if needed */
+ol > li {
+  margin-bottom: 20px; /* Space between task and instructions for clarity */
+}
