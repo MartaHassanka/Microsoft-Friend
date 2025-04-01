@@ -121,41 +121,81 @@ document.getElementById("programSelect").addEventListener("change", function () 
 // Comprehensive FAQ Content for Each Language
 const faqListContent = {
   en: [
-    { question: "What is Word used for?", answer: "Microsoft Word is used to create and edit text documents, such as letters, resumes, and reports." },
-    { question: "How do I save a document in Word?", answer: "To save a document in Word, press Ctrl + S or go to File > Save." },
-    { question: "How do I insert an image in Word?", answer: "In Word, go to Insert > Pictures, then select an image from your device." },
-    { question: "What is Excel used for?", answer: "Microsoft Excel is used to create and manage spreadsheets for data analysis and calculations." },
-    { question: "How do I create a chart in Excel?", answer: "In Excel, highlight your data, go to Insert > Charts, and select the desired chart type." },
-    { question: "What is Teams used for?", answer: "Microsoft Teams is used for collaboration, including messaging, video calls, and file sharing." },
-    { question: "How do I create a slide in PowerPoint?", answer: "To create a slide in PowerPoint, go to Home > New Slide and choose a layout." }
-  ],
-  fi: [
-    { question: "Mihin Wordia käytetään?", answer: "Microsoft Wordia käytetään tekstiasiakirjojen, kuten kirjeiden ja raporttien, luomiseen ja muokkaamiseen." },
-    { question: "Kuinka tallennan asiakirjan Wordissa?", answer: "Tallenna asiakirja Wordissa painamalla Ctrl + S tai siirtymällä kohtaan Tiedosto > Tallenna." },
-    { question: "Kuinka lisään kuvan Wordissa?", answer: "Wordissa siirry kohtaan Lisää > Kuvat ja valitse kuva laitteeltasi." },
-    { question: "Mihin Exceliä käytetään?", answer: "Microsoft Exceliä käytetään taulukoiden hallintaan ja tietojen analysointiin." },
-    { question: "Kuinka luon kaavion Excelissä?", answer: "Excelissä valitse tiedot, siirry kohtaan Lisää > Kaaviot ja valitse haluamasi kaaviotyyppi." },
-    { question: "Mihin Teamsia käytetään?", answer: "Microsoft Teams on yhteistyöalusta viestintään, videopuheluihin ja tiedostojen jakamiseen." },
-    { question: "Kuinka luon dian PowerPointissa?", answer: "Luo dia PowerPointissa siirtymällä kohtaan Aloitus > Uusi dia ja valitse asettelu." }
-  ],
-  pl: [
-    { question: "Do czego służy Word?", answer: "Microsoft Word służy do tworzenia i edycji dokumentów tekstowych, takich jak listy i raporty." },
-    { question: "Jak zapisać dokument w Wordzie?", answer: "Aby zapisać dokument w Wordzie, naciśnij Ctrl + S lub przejdź do Plik > Zapisz." },
-    { question: "Jak wstawić obraz w Wordzie?", answer: "W Wordzie przejdź do Wstaw > Obrazy i wybierz obraz z urządzenia." },
-    { question: "Do czego służy Excel?", answer: "Microsoft Excel służy do zarządzania arkuszami kalkulacyjnymi i analizy danych." },
-    { question: "Jak utworzyć wykres w Excelu?", answer: "W Excelu zaznacz dane, przejdź do Wstaw > Wykresy i wybierz typ wykresu." },
-    { question: "Do czego służy Teams?", answer: "Microsoft Teams to platforma współpracy do wiadomości, wideokonferencji i udostępniania plików." },
-    { question: "Jak utworzyć slajd w PowerPoint?", answer: "Aby utworzyć slajd w PowerPoint, przejdź do Strona główna > Nowy slajd i wybierz układ." }
-  ],
-  ar: [
-    { question: "ما هي استخدامات برنامج Word؟", answer: "يستخدم Microsoft Word لإنشاء وتحرير المستندات النصية، مثل الرسائل والتقارير." },
-    { question: "كيف أحفظ مستند في Word؟", answer: "لحفظ مستند في Word، اضغط على Ctrl + S أو انتقل إلى ملف > حفظ." },
-    { question: "كيف يمكنني إدراج صورة في Word؟", answer: "في Word، انتقل إلى إدراج > الصور، واختر صورة من جهازك." },
-    { question: "ما هي استخدامات برنامج Excel؟", answer: "يُستخدم Microsoft Excel لإنشاء وإدارة جداول البيانات وتحليل البيانات." },
-    { question: "كيف أنشئ رسمًا بيانيًا في Excel؟", answer: "في Excel، قم بتحديد البيانات، ثم انتقل إلى إدراج > الرسوم البيانية واختر نوع الرسم البياني." },
-    { question: "ما هي استخدامات برنامج Teams؟", answer: "Microsoft Teams هو منصة للتعاون تشمل المراسلة ومكالمات الفيديو ومشاركة الملفات." },
-    { question: "كيف أنشئ شريحة في PowerPoint؟", answer: "لإنشاء شريحة في PowerPoint، انتقل إلى الصفحة الرئيسية > شريحة جديدة واختر التخطيط." }
-  ]
+    { question: "Why is Word like the superhero of documents?", answer: "Because it saves the day when you're drowning in text! From novels to angry complaint letters, Word makes sure your words look good doing it." },
+    { question: "Is Excel just a scary math tool?", answer: "No way! Excel is more like a numbers playground—track your expenses, plan a wedding, or create a chart to prove how much pizza you eat." },
+    { question: "Can PowerPoint make me look like I know what I'm doing?", answer: "Absolutely! Even if you're winging it, PowerPoint's flashy slides will make your audience think you have your life together." },
+    { question: "Why does everyone talk about Teams?", answer: "Because it’s not just for work meetings—it’s for sharing memes with coworkers, 'accidentally' muting yourself, and occasionally being productive." },
+    { question: "What is OneDrive—just a glorified USB stick?", answer: "Nope! OneDrive is your invisible BFF that keeps all your files safe, backed up, and ready for action—no digging through drawers required." },
+    { question: "What makes Windows so iconic?", answer: "It’s been helping people connect, create, and play since before the internet was cool. Windows is your trusty tech gateway to, well, everything!" },
+    { question: "Why is Microsoft Edge actually cool?", answer: "Edge is like your tech-savvy friend who makes browsing smoother, saves your passwords, and doesn’t judge your late-night searches." },
+    { question: "Xbox—fun for gamers or couch potatoes?", answer: "Both! Whether you’re chasing zombies or just streaming Netflix, Xbox turns your couch into a world of endless adventures." },
+    { question: "What’s Azure—can I eat it?", answer: "Uh, no. Azure is the cloud that powers the internet behind the scenes—it’s basically the superhero cape of the digital world." },
+    { question: "Is Publisher Word’s artsy cousin?", answer: "Exactly! Publisher helps you whip up posters, flyers, and invitations with zero effort but maximum style points." },
+    { question: "What’s so special about Microsoft 365?", answer: "It’s like a VIP pass to productivity—Word, Excel, Teams, and more, all in one place, with extras like cloud storage and constant updates." },
+    { question: "Did Bill Gates really drop out of college to start Microsoft?", answer: "Yep! He left Harvard to change the world with computers. So technically, you can thank Microsoft for your procrastination skills." },
+    { question: "Why does Microsoft love blue so much?", answer: "Because blue screams 'Trust us, we’re professionals!' Plus, it pairs nicely with Windows’ iconic clouds and… the Blue Screen of Death (RIP)." },
+    { question: "Is it true Microsoft once saved Apple?", answer: "Yup! In 1997, Microsoft gave Apple $150 million, proving even tech giants can put their rivalries aside for a rainy day." },
+    { question: "What’s with the name 'Microsoft'?", answer: "It’s short for 'Microcomputer Software.' It could’ve been worse—'TinyPrograms Inc.' doesn’t quite have the same ring." },
+    { question: "What’s the deal with Clippy?", answer: "Clippy, the lovable paperclip, was Microsoft’s attempt at making help adorable. He’s retired now, but never forgotten." },
+    { question: "Why does Microsoft love updates so much?", answer: "Because nothing’s perfect! Updates are like love letters to your device—sometimes unexpected, but always with good intentions." }
+],
+ fi: [
+    { question: "Miksi Word on kuin asiakirjojen supersankari?", answer: "Koska se pelastaa päivän, kun hukut tekstiin! Rakkausromaaneista valituskirjeisiin, Word huolehtii, että sanasi näyttävät hyvältä." },
+    { question: "Onko Excel pelottava matematiikkatyökalu?", answer: "Ei todellakaan! Excel on kuin numeroleikkipuisto—seuraa menojasi, suunnittele häät tai tee kaavio todistaaksesi, kuinka paljon pizzaa syöt." },
+    { question: "Saako PowerPoint minut näyttämään siltä, että tiedän mitä teen?", answer: "Ehdottomasti! Vaikka keksisit kaiken lennosta, PowerPointin näyttävät diat saavat yleisösi uskomaan, että elämäsi on järjestyksessä." },
+    { question: "Miksi kaikki puhuvat Teamsista?", answer: "Koska se ei ole vain työpalavereita varten—se on myös meemien jakamista työkavereiden kanssa, itsesi 'vahingossa' mykistämistä ja joskus jopa tuottavaa työskentelyä." },
+    { question: "Onko OneDrive vain hienostunut USB-tikku?", answer: "Ei lainkaan! OneDrive on näkymätön paras ystäväsi, joka pitää tiedostosi turvassa, varmuuskopioituna ja aina saatavilla—ilman laatikoiden penkomista." },
+    { question: "Mikä tekee Windowsista niin ikonisen?", answer: "Se on auttanut ihmisiä yhdistymään, luomaan ja pelaamaan jo ennen kuin internetistä tuli cool. Windows on teknologian luotettava portti kaikkeen." },
+    { question: "Miksi Microsoft Edge on oikeasti siisti?", answer: "Edge on kuin teknisesti taitava kaverisi, joka tekee selaamisesta sujuvampaa, tallentaa salasanasi eikä tuomitse yöaikaisia hakujasi." },
+    { question: "Xbox—onko se hauskaa vain pelaajille vai myös laiskottelijoille?", answer: "Molemmille! Olitpa sitten zombien perässä tai striimaamassa Netflixiä, Xbox muuttaa sohvasi loputtomien seikkailujen maailmaksi." },
+    { question: "Mikä Azure on—voiko sen syödä?", answer: "Ei sentään. Azure on pilvipalvelu, joka pyörittää internetiä kulissien takana—se on kuin digitaalisen maailman supersankarin viitta." },
+    { question: "Onko Publisher Wordin taiteellinen serkku?", answer: "Aivan oikein! Publisher auttaa tekemään julisteita, esitteitä ja kutsuja helposti mutta tyylillä." },
+    { question: "Mikä tekee Microsoft 365:stä niin erityisen?", answer: "Se on kuin VIP-passi tuottavuuteen—Word, Excel, Teams ja paljon muuta yhdessä paikassa, pilvitallennuksella ja jatkuvilla päivityksillä varustettuna." },
+    { question: "Jättikö Bill Gates todella yliopiston perustaakseen Microsoftin?", answer: "Kyllä! Hän jätti Harvardin muuttaakseen maailman tietokoneilla. Joten teknisesti voit kiittää Microsoftia prokrastinaatiotaidoistasi." },
+    { question: "Miksi Microsoft rakastaa sinistä väriä niin paljon?", answer: "Koska sininen huokuu luottamusta! Lisäksi se sopii Windowsin ikonisiin pilviin ja... Sinisen ruudun kuolemaan (lepää rauhassa)." },
+    { question: "Onko totta, että Microsoft pelasti Applen kerran?", answer: "Kyllä! Vuonna 1997 Microsoft antoi Applelle 150 miljoonaa dollaria, mikä todistaa, että jopa teknologiayritykset voivat unohtaa riitansa sateisen päivän varalta." },
+    { question: "Mistä nimi 'Microsoft' tulee?", answer: "'Microcomputer Software'—eli mikrokompuutteri ja ohjelmisto. Se olisi voinut olla pahempaa—'Pikkuohjelmat Oy' ei kuulosta yhtä hyvältä." },
+    { question: "Mikä oli homman nimi Clippyn kanssa?", answer: "Clippy, rakastettava (tai vihattu) paperiliitin, oli Microsoftin yritys tehdä avusta söpöä. Hän on nyt eläkkeellä, mutta ei koskaan unohdettu." },
+    { question: "Miksi Microsoft rakastaa päivityksiä niin paljon?", answer: "Koska mikään ei ole täydellistä! Päivitykset ovat kuin rakkauskirjeitä laitteellesi—joskus yllättäviä, mutta aina hyvää tarkoittavia." }
+],
+pl: [
+    { question: "Dlaczego Word to superbohater dokumentów?", answer: "Bo ratuje dzień, kiedy toniesz w tekście! Od powieści po gniewne listy skarg, Word sprawia, że Twoje słowa wyglądają świetnie." },
+    { question: "Czy Excel to przerażające narzędzie dla matematyków?", answer: "Absolutnie nie! Excel to jak plac zabaw dla liczb—śledź wydatki, planuj ślub albo stwórz wykres, żeby udowodnić, ile pizzy jesz." },
+    { question: "Czy PowerPoint sprawi, że będę wyglądać, jakbym wiedział, co robię?", answer: "Oczywiście! Nawet jeśli improwizujesz, efektowne slajdy PowerPointa sprawią, że Twoja publiczność uwierzy, że masz wszystko pod kontrolą." },
+    { question: "Dlaczego wszyscy mówią o Teams?", answer: "Bo to nie tylko narzędzie do spotkań—możesz tu wysyłać memy współpracownikom, 'przypadkowo' się wyciszyć i czasami być produktywnym." },
+    { question: "Czy OneDrive to tylko udawany pendrive?", answer: "Wcale nie! OneDrive to Twój niewidzialny przyjaciel, który trzyma Twoje pliki w bezpieczeństwie, w chmurze i zawsze gotowe do użycia." },
+    { question: "Co sprawia, że Windows jest tak kultowy?", answer: "Pomaga ludziom łączyć się, tworzyć i grać od czasów, zanim internet stał się popularny. Windows to Twój technologiczny klucz do wszystkiego." },
+    { question: "Dlaczego Microsoft Edge jest tak fajny?", answer: "Edge to jak Twój obeznany w technologii kumpel, który przyspiesza przeglądanie, zapisuje hasła i nie ocenia Twoich nocnych wyszukiwań." },
+    { question: "Xbox—frajda dla graczy czy leniuchów?", answer: "Dla obu! Niezależnie od tego, czy ścigasz zombie, czy strumieniujesz Netflixa, Xbox zmienia Twoją kanapę w świat nieskończonych przygód." },
+    { question: "Co to jest Azure—czy można to zjeść?", answer: "Nie, niestety. Azure to chmura, która napędza internet zza kulis—dosłownie peleryna superbohatera cyfrowego świata." },
+    { question: "Czy Publisher to artystyczny kuzyn Worda?", answer: "Dokładnie! Publisher pomaga tworzyć plakaty, ulotki i zaproszenia z łatwością, ale w wielkim stylu." },
+    { question: "Co takiego wyjątkowego jest w Microsoft 365?", answer: "To jak VIP-pass do produktywności—Word, Excel, Teams i więcej w jednym miejscu, z dodatkami jak chmura i ciągłe aktualizacje." },
+    { question: "Czy to prawda, że Bill Gates rzucił studia, by założyć Microsoft?", answer: "Tak! Opuścił Harvard, by zmienić świat komputerami. Więc technicznie rzecz biorąc, możesz dziękować Microsoftowi za swoje umiejętności prokrastynacji." },
+    { question: "Dlaczego Microsoft tak kocha kolor niebieski?", answer: "Bo niebieski krzyczy 'Zaufaj nam, jesteśmy profesjonalistami!' Poza tym świetnie pasuje do ikonicznych chmur Windowsa i... Niebieskiego Ekranu Śmierci (RIP)." },
+    { question: "Czy to prawda, że Microsoft kiedyś uratował Apple?", answer: "Tak! W 1997 roku Microsoft podarował Apple 150 milionów dolarów, udowadniając, że nawet giganty technologiczne mogą zapomnieć o rywalizacji na deszczowy dzień." },
+    { question: "Skąd się wzięła nazwa 'Microsoft'?", answer: "To skrót od 'Microcomputer Software'. Mogło być gorzej—'Mikroprogramy Sp. z o.o.' nie brzmi tak dobrze." },
+    { question: "O co chodziło z Clippy?", answer: "Clippy, ukochany (albo znienawidzony) spinacz, był próbą Microsoftu, by pomoc była urocza. Teraz jest na emeryturze, ale nigdy nie zapomniany." },
+    { question: "Dlaczego Microsoft tak bardzo kocha aktualizacje?", answer: "Bo nic nie jest doskonałe! Aktualizacje to jak listy miłosne do Twojego urządzenia—czasami zaskakujące, ale zawsze w dobrych intencjach." }
+],
+ar: [
+    { question: "لماذا يعتبر Word بطلًا خارقًا للمستندات؟", answer: "لأنه ينقذك عندما تغرق في النصوص! من الروايات إلى رسائل الشكاوى الغاضبة، Word يضمن أن تبدو كلماتك بأفضل شكل ممكن." },
+    { question: "هل Excel مجرد أداة رياضيات مخيفة؟", answer: "بالطبع لا! Excel يشبه ملعبًا للأرقام—تتبع نفقاتك، خطط لحفل زفاف، أو اصنع رسمًا بيانيًا لإثبات كمية البيتزا التي تأكلها." },
+    { question: "هل يمكن أن يجعلني PowerPoint أبدو وكأنني أعرف ما أفعله؟", answer: "بالتأكيد! حتى لو كنت ترتجل، عروض PowerPoint الفلاشية ستجعل جمهورك يعتقد أن حياتك منظمة." },
+    { question: "لماذا يتحدث الجميع عن Teams؟", answer: "لأنه ليس فقط للاجتماعات العملية—يمكنك مشاركة الميمات مع زملائك، 'عن طريق الخطأ' كتم صوتك، وأحيانًا تكون منتجًا." },
+    { question: "ما هو OneDrive—هل هو مجرد ذاكرة USB مبالغ فيها؟", answer: "لا، أبدًا! OneDrive هو صديقك غير المرئي الذي يحفظ ملفاتك آمنة، ومدعومة، وجاهزة للعمل—دون الحاجة للتنقيب في الأدراج." },
+    { question: "ما الذي يجعل Windows أيقونيًا؟", answer: "لقد كان يساعد الناس على التواصل، والإبداع، واللعب منذ قبل أن يصبح الإنترنت رائعًا. Windows هو بوابتك التكنولوجية الموثوقة إلى كل شيء!" },
+    { question: "لماذا يعتبر Microsoft Edge رائعًا حقًا؟", answer: "Edge مثل صديقك الخبير بالتكنولوجيا الذي يجعل التصفح أكثر سلاسة، ويحفظ كلمات المرور الخاصة بك، ولا يحكم على عمليات بحثك في وقت متأخر من الليل." },
+    { question: "Xbox—هل هو ممتع للاعبين أم للكسالى؟", answer: "كلاهما! سواء كنت تطارد الزومبي أو تشاهد Netflix، Xbox يحول أريكتك إلى عالم من المغامرات التي لا تنتهي." },
+    { question: "ما هو Azure—هل يمكنني أكله؟", answer: "لا، للأسف. Azure هو السحابة التي تدير الإنترنت خلف الكواليس—إنها مثل عباءة البطل الخارق لعالم التكنولوجيا." },
+    { question: "هل Publisher هو ابن عم Word الفني؟", answer: "بالضبط! يساعدك Publisher على تصميم ملصقات، ونشرات، ودعوات بسهولة ولكن بأسلوب رائع." },
+    { question: "ما الذي يجعل Microsoft 365 مميزًا؟", answer: "إنه مثل بطاقة VIP للإنتاجية—Word، Excel، Teams، والمزيد، كل ذلك في مكان واحد، مع ميزات إضافية مثل التخزين السحابي والتحديثات المستمرة." },
+    { question: "هل صحيح أن بيل غيتس ترك الجامعة لتأسيس Microsoft؟", answer: "نعم! ترك هارفارد ليغير العالم باستخدام الكمبيوترات. لذا تقنيًا، يمكنك شكر Microsoft على مهاراتك في التسويف." },
+    { question: "لماذا تحب Microsoft اللون الأزرق كثيرًا؟", answer: "لأن الأزرق يصرخ 'ثق بنا، نحن محترفون!' بالإضافة إلى أنه يتماشى بشكل رائع مع غيوم Windows الأيقونية و… شاشة الموت الزرقاء (إنا لله وإنا إليه راجعون)." },
+    { question: "هل صحيح أن Microsoft أنقذت Apple مرة؟", answer: "نعم! في عام 1997، منحت Microsoft شركة Apple مبلغ 150 مليون دولار، مما يثبت أن عمالقة التكنولوجيا يمكنهم وضع المنافسة جانبًا لأيام الأزمات." },
+    { question: "ما قصة اسم 'Microsoft'؟", answer: "إنه اختصار لكلمتي 'Microcomputer Software'. كان يمكن أن يكون أسوأ—'TinyPrograms Inc.' لا يبدو بنفس الروعة." },
+    { question: "ما قصة Clippy؟", answer: "Clippy، مشبك الورق المحبوب (أو المكروه)، كان محاولة من Microsoft لجعل المساعدة لطيفة. الآن هو متقاعد، لكنه لن يُنسى أبدًا." },
+    { question: "لماذا تحب Microsoft التحديثات كثيرًا؟", answer: "لأن لا شيء كامل! التحديثات مثل رسائل الحب لجهازك—أحيانًا تكون مفاجئة، ولكن دائمًا بنوايا حسنة." }
+]
 };
 // Function to Populate FAQ List Based on Language
 function populateFAQ(language) {
