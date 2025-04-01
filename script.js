@@ -2399,3 +2399,8 @@ function populateWalkthroughsArabic() {
 document.addEventListener("DOMContentLoaded", () => {
   populateWalkthroughsArabic(); // Populate the Arabic walkthroughs list
 });
+// Function for smooth scrolling
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  section.scrollIntoView({ behavior: 'smooth' });
+}
