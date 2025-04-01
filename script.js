@@ -118,45 +118,6 @@ document.getElementById("programSelect").addEventListener("change", function () 
   const selectedLanguage = document.getElementById("languageSelect").value;
   updateTutorials(selectedLanguage, selectedProgram);
 });
-// Comprehensive FAQ Content for Each Language
-const faqListContent = {
-  en: [
-    { question: "What is Word used for?", answer: "Microsoft Word is used to create and edit text documents, such as letters, resumes, and reports." },
-    { question: "How do I save a document in Word?", answer: "To save a document in Word, press Ctrl + S or go to File > Save." },
-    { question: "How do I insert an image in Word?", answer: "In Word, go to Insert > Pictures, then select an image from your device." },
-    { question: "What is Excel used for?", answer: "Microsoft Excel is used to create and manage spreadsheets for data analysis and calculations." },
-    { question: "How do I create a chart in Excel?", answer: "In Excel, highlight your data, go to Insert > Charts, and select the desired chart type." },
-    { question: "What is Teams used for?", answer: "Microsoft Teams is used for collaboration, including messaging, video calls, and file sharing." },
-    { question: "How do I create a slide in PowerPoint?", answer: "To create a slide in PowerPoint, go to Home > New Slide and choose a layout." }
-  ],
-  fi: [
-    { question: "Mihin Wordia käytetään?", answer: "Microsoft Wordia käytetään tekstiasiakirjojen, kuten kirjeiden ja raporttien, luomiseen ja muokkaamiseen." },
-    { question: "Kuinka tallennan asiakirjan Wordissa?", answer: "Tallenna asiakirja Wordissa painamalla Ctrl + S tai siirtymällä kohtaan Tiedosto > Tallenna." },
-    { question: "Kuinka lisään kuvan Wordissa?", answer: "Wordissa siirry kohtaan Lisää > Kuvat ja valitse kuva laitteeltasi." },
-    { question: "Mihin Exceliä käytetään?", answer: "Microsoft Exceliä käytetään taulukoiden hallintaan ja tietojen analysointiin." },
-    { question: "Kuinka luon kaavion Excelissä?", answer: "Excelissä valitse tiedot, siirry kohtaan Lisää > Kaaviot ja valitse haluamasi kaaviotyyppi." },
-    { question: "Mihin Teamsia käytetään?", answer: "Microsoft Teams on yhteistyöalusta viestintään, videopuheluihin ja tiedostojen jakamiseen." },
-    { question: "Kuinka luon dian PowerPointissa?", answer: "Luo dia PowerPointissa siirtymällä kohtaan Aloitus > Uusi dia ja valitse asettelu." }
-  ],
-  pl: [
-    { question: "Do czego służy Word?", answer: "Microsoft Word służy do tworzenia i edycji dokumentów tekstowych, takich jak listy i raporty." },
-    { question: "Jak zapisać dokument w Wordzie?", answer: "Aby zapisać dokument w Wordzie, naciśnij Ctrl + S lub przejdź do Plik > Zapisz." },
-    { question: "Jak wstawić obraz w Wordzie?", answer: "W Wordzie przejdź do Wstaw > Obrazy i wybierz obraz z urządzenia." },
-    { question: "Do czego służy Excel?", answer: "Microsoft Excel służy do zarządzania arkuszami kalkulacyjnymi i analizy danych." },
-    { question: "Jak utworzyć wykres w Excelu?", answer: "W Excelu zaznacz dane, przejdź do Wstaw > Wykresy i wybierz typ wykresu." },
-    { question: "Do czego służy Teams?", answer: "Microsoft Teams to platforma współpracy do wiadomości, wideokonferencji i udostępniania plików." },
-    { question: "Jak utworzyć slajd w PowerPoint?", answer: "Aby utworzyć slajd w PowerPoint, przejdź do Strona główna > Nowy slajd i wybierz układ." }
-  ],
-  ar: [
-    { question: "ما هي استخدامات برنامج Word؟", answer: "يستخدم Microsoft Word لإنشاء وتحرير المستندات النصية، مثل الرسائل والتقارير." },
-    { question: "كيف أحفظ مستند في Word؟", answer: "لحفظ مستند في Word، اضغط على Ctrl + S أو انتقل إلى ملف > حفظ." },
-    { question: "كيف يمكنني إدراج صورة في Word؟", answer: "في Word، انتقل إلى إدراج > الصور، واختر صورة من جهازك." },
-    { question: "ما هي استخدامات برنامج Excel؟", answer: "يُستخدم Microsoft Excel لإنشاء وإدارة جداول البيانات وتحليل البيانات." },
-    { question: "كيف أنشئ رسمًا بيانيًا في Excel؟", answer: "في Excel، قم بتحديد البيانات، ثم انتقل إلى إدراج > الرسوم البيانية واختر نوع الرسم البياني." },
-    { question: "ما هي استخدامات برنامج Teams؟", answer: "Microsoft Teams هو منصة للتعاون تشمل المراسلة ومكالمات الفيديو ومشاركة الملفات." },
-    { question: "كيف أنشئ شريحة في PowerPoint؟", answer: "لإنشاء شريحة في PowerPoint، انتقل إلى الصفحة الرئيسية > شريحة جديدة واختر التخطيط." }
-  ]
-};
 
 // Function to Populate FAQ List Based on Language
 function populateFAQ(language) {
