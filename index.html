@@ -132,6 +132,16 @@
       <p id="footerText">&copy; 2025 Microsoft Friend</p>
     </footer>
     <script src="scripts.js"></script>
+  <script>
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.error('Section with ID "' + sectionId + '" not found.');
+    }
+  }
+</script>
   </body>
 </html>
 <link rel="stylesheet" href="style.css">
