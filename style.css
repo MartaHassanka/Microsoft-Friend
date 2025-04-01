@@ -100,9 +100,9 @@ button:hover {
 /* Style for task numbers and names */
 ol > li > strong {
   font-weight: bold;
-  background: linear-gradient(90deg, #FF7F50, #FFD700, #ADFF2F, #00FA9A, #1E90FF, #8A2BE2);
-  -webkit-background-clip: text; /* Enables the gradient on text */
-  -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+  background: #FFA500; /* Solid orange color */
+  -webkit-background-clip: text; /* Enables the text clip */
+  -webkit-text-fill-color: transparent; /* Makes text transparent to show the background color */
   font-size: 1.2rem; /* Slightly larger for emphasis */
   margin-bottom: 10px; /* Space between tasks */
 }
