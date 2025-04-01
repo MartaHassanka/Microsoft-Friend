@@ -119,4 +119,11 @@ ol > li > ul > li {
 ol > li {
   margin-bottom: 20px; /* Space between task and instructions for clarity */
 }
+{
+  scroll-padding-top: 100px; /* Adjust to match the height of your header */
+}
+
 <img id="Logo" src="Logo.jpg" alt="App Logo">
+html {
+
+
